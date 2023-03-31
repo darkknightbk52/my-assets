@@ -1,6 +1,5 @@
 from diagrams import Cluster, Diagram
-from diagrams.onprem.client import Client
-from diagrams.generic.device import Mobile, Tablet
+from diagrams.aws.general import Client, MobileClient
 
 graph_attr = {
         "bgcolor": "transparent",
@@ -10,5 +9,4 @@ graph_attr = {
 with Diagram("", filename="clients", direction="TB", graph_attr=graph_attr):
     with Cluster(""):
         desktop = Client("")
-        mobile = Mobile("")
-        tablet = Tablet("")
+        mobile = MobileClient("")

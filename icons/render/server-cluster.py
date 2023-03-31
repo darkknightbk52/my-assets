@@ -1,5 +1,5 @@
 from diagrams import Cluster, Diagram
-from diagrams.onprem.compute import Server
+from diagrams.aws.general import TraditionalServer
 
 graph_attr = {
         "bgcolor": "transparent",
@@ -8,5 +8,5 @@ graph_attr = {
 
 with Diagram("", filename="server_cluster", direction="TB", graph_attr=graph_attr, show=False):
     with Cluster(""):
-        server1 = Server("")
-        server2 = Server("")
+        server1 = TraditionalServer("")
+        server2 = TraditionalServer("")
